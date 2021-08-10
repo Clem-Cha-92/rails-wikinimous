@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+# generate 10 articles
+10.times do
+  article = Article.new(
+    title: Faker::Company.bs,
+    content: Faker::Movies::BackToTheFuture.quote
+  )
+  article.save!
+end
