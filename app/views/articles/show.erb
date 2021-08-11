@@ -2,8 +2,8 @@
 <p><%= @article.content %></p>
 
 <%= link_to("Back to list", articles_path) %>
-<%= link_to("Edit this task", edit_path(@article)) %>
+<%= link_to("Edit this task", edit_article_path(@article)) %>
 <%= link_to "Delete #{@article.title}",
-            destroy_path(@article),
+            article_path(@article),
             method: :delete,
             data: { confirm: "Are you sure?" } %>
